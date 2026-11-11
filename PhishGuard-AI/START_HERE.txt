@@ -1,0 +1,50 @@
+PhishGuardAI v0.2.2 — Local Run
+================================
+
+1) BACKEND TERMINAL
+
+From the PhishGuard-AI folder:
+
+    python -m pip install -r backend/requirements.txt
+
+
+Keep this terminal running.
+
+2) FRONTEND TERMINAL
+
+Open a second terminal:
+
+    cd frontend
+    npm install
+    npm run dev
+
+Open the local URL Vite prints (normally http://localhost:5173).
+
+3) GOOGLE / GMAIL
+
+- Sign in with Google on the official Google popup.
+- Click Authorize Gmail Access.
+- Grant Gmail read-only permission.
+- Inbox should load up to 25 messages at a time.
+- Use Load more for the next Gmail page.
+
+4) IF GMAIL DOES NOT LOAD
+
+The repaired version now shows specific errors for expired tokens, missing Gmail permission,
+rate limiting, backend connection problems, timeouts, and Gmail API failures.
+
+Check that:
+- backend terminal is still running on http://127.0.0.1:8000
+- frontend/.env contains the correct VITE_GOOGLE_CLIENT_ID
+- VITE_API_BASE_URL is http://127.0.0.1:8000 for local development
+- the Google Cloud OAuth client allows the exact local frontend origin you are using
+
+5) TESTS
+
+From the PhishGuard-AI folder:
+
+    python -m pytest -q tests
+
+Expected for this package: 59 passed.
+
+See docs/UI_UPDATE_0.2.2.md for the complete fix list.

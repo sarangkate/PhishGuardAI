@@ -1,0 +1,22 @@
+PHISHGUARDAI - GOOGLE CLIENT ID SETUP
+
+1. In this frontend folder, create a file named:
+   .env
+
+2. Put exactly these two lines in it:
+   VITE_API_BASE_URL=http://127.0.0.1:8000
+   VITE_GOOGLE_CLIENT_ID=YOUR_GOOGLE_WEB_CLIENT_ID.apps.googleusercontent.com
+
+3. Replace ONLY the value after VITE_GOOGLE_CLIENT_ID= with your Google OAuth Web Client ID.
+
+4. Save the file.
+
+5. Stop Vite with Ctrl+C and restart:
+   npm run dev
+
+6. Open:
+   http://localhost:5173
+
+Do NOT put your Google password here.
+Do NOT put the Client Secret here.
+Use the OAuth Web Client ID from Google Cloud Console.

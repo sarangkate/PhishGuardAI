@@ -1,0 +1,32 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.pyc
+node_modules/
+dist/
+build/
+token.json
+credentials.json
+client_secret*.json
+
+# Environment files
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+
+# Large AI model files
+*.safetensors
+
+
+# Local application databases
+PhishGuard-AI/data/*.db
+PhishGuard-AI/data/*.sqlite
+PhishGuard-AI/data/*.sqlite3
+
